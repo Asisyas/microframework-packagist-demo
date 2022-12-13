@@ -1,0 +1,8 @@
+routes:
+  hello_world:
+    path: /
+    methods:
+      - GET
+    options:
+      action: index
+      controller: 'App\HelloWorld\Communication\Controller\HelloWorldController'

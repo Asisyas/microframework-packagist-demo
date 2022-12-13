@@ -1,0 +1,7 @@
+<?php
+
+declare(strict_types=1);
+
+$callback = include dirname(__FILE__) . '/../src/App.php';
+
+$callback()->run();

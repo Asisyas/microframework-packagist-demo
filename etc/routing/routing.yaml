@@ -1,0 +1,4 @@
+routes:
+  hello_world_plugin:
+    resource: '@HelloWorldPlugin/Resources/routing/routing.yaml'
+    format: yaml
