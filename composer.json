@@ -2,7 +2,7 @@
     "name": "micro/skeleton",
     "description": "Micro Framework: Application skeleton",
     "type": "project",
-    "version": "1.0",
+    "version": "1.1",
     "require": {
         "micro/kernel-app": "^1",
         "micro/plugin-logger-monolog": "^1",
