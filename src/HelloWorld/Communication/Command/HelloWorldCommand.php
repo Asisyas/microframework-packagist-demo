@@ -16,12 +16,12 @@ class HelloWorldCommand extends Command
         parent::__construct('app:hello-world');
     }
 
-    public function configure()
+    public function configure(): void
     {
         $this->addArgument('name', InputArgument::OPTIONAL, 'Who do you need to say hello to?', 'world');
     }
 
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln(sprintf('Hello, %s!', $input->getArgument('name')));
 
