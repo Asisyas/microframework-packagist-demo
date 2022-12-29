@@ -13,10 +13,28 @@ declare(strict_types=1);
 
 namespace App\HelloWorld;
 
+use App\HelloWorld\Facade\HelloWorldFacade;
+use App\HelloWorld\Facade\HelloWorldFacadeInterface;
+use Micro\Component\DependencyInjection\Container;
+use Micro\Framework\Kernel\Plugin\DependencyProviderInterface;
+use Micro\Kernel\App\AppKernelInterface;
+
 /**
  * @author Stanislau Komar <head.trackingsoft@gmail.com>
  */
-class HelloWorldPlugin
+class HelloWorldPlugin implements DependencyProviderInterface
 {
+    public function provideDependencies(Container $container): void
+    {
+        $container->register(HelloWorldFacadeInterface::class, function (
+            AppKernelInterface $kernel
+        ) {
+            return $this->createHelloWorldFacade($kernel);
+        });
+    }
 
+    protected function createHelloWorldFacade(AppKernelInterface $kernel): HelloWorldFacadeInterface
+    {
+        return new HelloWorldFacade($kernel);
+    }
 }

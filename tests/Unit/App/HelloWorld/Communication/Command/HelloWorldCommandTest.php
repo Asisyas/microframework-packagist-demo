@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Unit\App\HelloWorld\Communication\Command;
 
 use App\HelloWorld\Communication\Command\HelloWorldCommand;
+use App\HelloWorld\Facade\HelloWorldFacadeInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -18,7 +19,16 @@ class HelloWorldCommandTest extends TestCase
 
     public function setUp(): void
     {
-        $this->command = new HelloWorldCommand();
+        $helloWorldFacadeMock = $this->createMock(HelloWorldFacadeInterface::class);
+        $helloWorldFacadeMock
+            ->expects($this->once())->method('greet')
+            ->withAnyParameters()
+            ->willReturn('Hello, World !')
+        ;
+
+        $this->command = new HelloWorldCommand(
+            $helloWorldFacadeMock
+        );
         $this->input = $this
             ->createMock(InputInterface::class);
 
