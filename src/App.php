@@ -14,7 +14,7 @@ if (!$basedir) {
 
 require_once $basedir . '/vendor/autoload.php';
 
-return function () use ($basedir) {
+return function () use ($basedir): \Micro\Framework\Kernel\KernelInterface {
     $applicationConfiguration = new class ($basedir) extends DefaultApplicationConfiguration {
         private readonly Dotenv $dotenv;
 

@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace App\HelloWorld\Communication\Controller;
 
 use App\HelloWorld\Facade\HelloWorldFacadeInterface;
+use Micro\Plugin\Http\Exception\HttpBadRequestException;
+use Micro\Plugin\Http\Exception\HttpForbiddenException;
+use Micro\Plugin\Http\Exception\HttpInternalServerException;
+use Micro\Plugin\Http\Exception\RouteInvalidConfigurationException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
