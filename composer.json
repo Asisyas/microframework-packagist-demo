@@ -7,9 +7,8 @@
         "micro/plugin-logger-monolog": "^1",
         "micro/plugin-console": "^1",
         "micro/plugin-configuration-helper": "^1",
-        "micro/plugin-locator": "^1",
         "vlucas/phpdotenv": "^5.4",
-        "micro/plugin-http": "^1"
+        "micro/plugin-http-pack": "^1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9",
