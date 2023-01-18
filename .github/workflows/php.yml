@@ -1,39 +1,44 @@
-name: PHP Composer
-
+name: Skeleton CI
 on:
   push:
-    branches: [ "master" ]
+    branches: [ 'master' ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ 'master' ]
 
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        coverage: none
+        php-version: 8.2
 
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v3
       with:
-        php_version: "8.2"
+        php_version: 8.2
         path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        key: ${{ runner.os }}
         restore-keys: |
-          ${{ runner.os }}-php-
+          ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+    - name: Composer install
+      uses: ramsey/composer-install@v2
+      with:
+        composer-options: --prefer-dist --no-progress --no-cache
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+    - name: Validate composer
+      run: composer validate --strict
 
     - name: Run test suite
-      run: vendor/bin/phpunit
+      run: ./vendor/bin/phpunit

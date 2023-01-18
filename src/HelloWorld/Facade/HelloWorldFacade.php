@@ -20,9 +20,6 @@ use Micro\Kernel\App\AppKernelInterface;
  */
 readonly class HelloWorldFacade implements HelloWorldFacadeInterface
 {
-    /**
-     * @param AppKernelInterface $appKernel
-     */
     public function __construct(private AppKernelInterface $appKernel)
     {
     }
