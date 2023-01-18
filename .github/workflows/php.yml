@@ -27,10 +27,10 @@ jobs:
         path: vendor
         key: ${{ runner.os }}
         restore-keys: |
-          ${{ runner.os }}-php-
+          ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
 
     - name: Install dependencies
-      run: composer update --prefer-dist --no-progress --no-cache
+      run: composer install --prefer-dist --no-progress --no-cache
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
