@@ -12,9 +12,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class HelloWorldCommand extends Command
 {
-    /**
-     * @param HelloWorldFacadeInterface $helloWorldFacade
-     */
     public function __construct(private HelloWorldFacadeInterface $helloWorldFacade)
     {
         parent::__construct('app:hello-world');

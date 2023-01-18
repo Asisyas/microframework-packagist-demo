@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class HelloWorldControllerTest extends TestCase
 {
-
     public function testIndex()
     {
         $helloMessage = 'Hello, World!';

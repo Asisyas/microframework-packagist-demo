@@ -17,7 +17,7 @@ class HelloWorldCommandTest extends TestCase
     private InputInterface $input;
     private OutputInterface $output;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $helloWorldFacadeMock = $this->createMock(HelloWorldFacadeInterface::class);
         $helloWorldFacadeMock

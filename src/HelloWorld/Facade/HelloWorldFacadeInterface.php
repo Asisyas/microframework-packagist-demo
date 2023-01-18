@@ -18,10 +18,5 @@ namespace App\HelloWorld\Facade;
  */
 interface HelloWorldFacadeInterface
 {
-    /**
-     * @param string|null $name
-     *
-     * @return string
-     */
     public function greet(string $name = null): string;
 }
