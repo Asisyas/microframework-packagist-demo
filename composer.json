@@ -3,6 +3,7 @@
     "description": "Micro Framework: Application skeleton",
     "license": "MIT",
     "type": "project",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Stanislau Komar",
@@ -11,6 +12,7 @@
     ],
     "require": {
         "micro/kernel-app": "^1.6",
+        "micro/autowire": "^1.6",
         "micro/plugin-configuration-helper": "^1",
         "micro/plugin-console": "^1",
         "micro/plugin-http-pack": "^1",
