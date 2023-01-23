@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Unit\App\HelloWorld\Communication\Command;
+namespace Unit\Communication\HelloWorld\Command;
 
 use App\Communication\HelloWorld\Command\HelloWorldCommand;
 use App\Shared\HelloWorld\HelloWorldFacadeInterface;
