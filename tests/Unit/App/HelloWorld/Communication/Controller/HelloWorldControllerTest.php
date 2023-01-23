@@ -2,8 +2,8 @@
 
 namespace Unit\App\HelloWorld\Communication\Controller;
 
-use App\HelloWorld\Communication\Controller\HelloWorldController;
-use App\HelloWorld\Facade\HelloWorldFacadeInterface;
+use App\Communication\HelloWorld\Controller\HelloWorldController;
+use App\Shared\HelloWorld\HelloWorldFacadeInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
 

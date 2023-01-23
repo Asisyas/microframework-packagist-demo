@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\HelloWorld\Facade;
+namespace App\Shared\HelloWorld;
 
 /**
  * @author Stanislau Komar <head.trackingsoft@gmail.com>

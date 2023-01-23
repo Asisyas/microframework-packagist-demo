@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Unit\App\HelloWorld\Communication\Command;
 
-use App\HelloWorld\Communication\Command\HelloWorldCommand;
-use App\HelloWorld\Facade\HelloWorldFacadeInterface;
+use App\Communication\HelloWorld\Command\HelloWorldCommand;
+use App\Shared\HelloWorld\HelloWorldFacadeInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

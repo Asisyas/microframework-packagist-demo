@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\HelloWorld\Communication\Command;
+namespace App\Communication\HelloWorld\Command;
 
-use App\HelloWorld\Facade\HelloWorldFacadeInterface;
+use App\Shared\HelloWorld\HelloWorldFacadeInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

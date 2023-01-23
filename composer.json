@@ -13,11 +13,13 @@
     "require": {
         "micro/kernel-app": "^1.6",
         "micro/autowire": "^1.6",
-        "micro/plugin-configuration-helper": "^1",
-        "micro/plugin-console": "^1",
-        "micro/plugin-http-pack": "^1",
+        "micro/plugin-configuration-helper": "^1.6",
+        "micro/plugin-console": "^1.6",
+        "micro/plugin-http-pack": "^1.6",
         "micro/plugin-logger-monolog": "^1",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "micro/plugin-doctrine": "^1.6.0",
+        "micro/plugin-twig": "^1.6"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.29",

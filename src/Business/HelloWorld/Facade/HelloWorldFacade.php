@@ -11,8 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace App\HelloWorld\Facade;
+namespace App\Business\HelloWorld\Facade;
 
+use App\Shared\HelloWorld\HelloWorldFacadeInterface;
 use Micro\Kernel\App\AppKernelInterface;
 
 /**
