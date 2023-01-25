@@ -3,7 +3,6 @@
     "description": "Micro Framework: Application skeleton",
     "license": "MIT",
     "type": "project",
-    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Stanislau Komar",
@@ -19,7 +18,8 @@
         "micro/plugin-logger-monolog": "^1",
         "vlucas/phpdotenv": "^5.4",
         "micro/plugin-doctrine": "^1.6.0",
-        "micro/plugin-twig": "^1.6"
+        "micro/plugin-twig": "^1.6",
+        "micro/plugin-twig-webpack-encore": "*"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.29",
@@ -31,6 +31,11 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Test\\Unit\\": "tests/Unit"
         }
     },
     "config": {
@@ -46,7 +51,15 @@
             "@auto-scripts"
         ],
         "auto-scripts": [
-            "@test-all"
+            "@test-all",
+            "@yarn-install",
+            "@yarn-build"
+        ],
+        "yarn-install": [
+            "yarn install"
+        ],
+        "yarn-build": [
+            "yarn build"
         ],
         "test-all": [
             "@test-psalm",

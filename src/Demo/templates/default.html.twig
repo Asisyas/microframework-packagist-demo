@@ -1,0 +1,15 @@
+{% extends '@DemoAppPlugin/base.html.twig'%}
+{% block body %}
+    {% block header %}
+        <header class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="https://micro-php.net">Micro-PHP Demo</a>
+            </nav>
+        </header>
+    {% endblock %}
+    <div class="container app">
+        {% block main %}
+
+        {% endblock %}
+    </div>
+{% endblock %}

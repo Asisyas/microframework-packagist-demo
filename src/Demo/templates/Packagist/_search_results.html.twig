@@ -1,0 +1,40 @@
+<table class="table table-striped">
+    <tr>
+        <th scope="col">
+            Package
+        </th>
+        <th  scope="col">
+            Description
+        </th>
+        <th  scope="col">
+            Repository
+        </th>
+        <th  scope="col">
+            Downloads
+        </th>
+        <th  scope="col">
+            Stars
+        </th>
+    </tr>
+    {% for package in results.results %}
+        <tr>
+            <td>
+                <a href="{{ package.url }}">
+                    {{ package.name }}
+                </a>
+            </td>
+            <td>
+                {{ package.description }}
+            </td>
+            <td>
+                <a href="{{ package.repository }}"> {{ package.repository }} </a>
+            </td>
+            <td>
+                {{ package.downloads }}
+            </td>
+            <td>
+                {{ package.favers }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>

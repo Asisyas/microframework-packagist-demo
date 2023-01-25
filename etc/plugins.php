@@ -1,7 +1,7 @@
 <?php
 
 return [
-    App\Plugin\AppPlugin::class,
+    App\Demo\DemoAppPlugin::class,
 
     // Separate system plugins from appliction plugins.
     Micro\Plugin\Configuration\Helper\ConfigurationHelperPlugin::class,
@@ -10,4 +10,5 @@ return [
     Micro\Plugin\Logger\Monolog\MonologPlugin::class,
     Micro\Plugin\Doctrine\DoctrinePlugin::class,
     Micro\Plugin\Twig\TwigPlugin::class,
+    OleksiiBulba\WebpackEncorePlugin\WebpackEncorePlugin::class,
 ];

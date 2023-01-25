@@ -1,0 +1,36 @@
+{% extends '@DemoAppPlugin/default.html.twig' %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-12">
+            {% include '@DemoAppPlugin/Packagist/_search_form.html.twig' with { query: query } %}
+
+            {% if query %}
+
+            <div class="card mx-auto">
+                <div class="card-header">
+                    {% if results %}
+                        Search results
+                    {% endif %}
+
+                    {% if exception %}
+                        Oops... something went wrong.
+                    {% endif %}
+
+                </div>
+                <div class="card-body">
+                    {% if results %}
+                        {% include '@DemoAppPlugin/Packagist/_search_results.html.twig' with { results: results } %}
+                    {% endif %}
+
+                    {% if exception %}
+                        <p class="text-danger text-center">
+                            {{ exception.message }}
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
