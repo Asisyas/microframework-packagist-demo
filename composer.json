@@ -51,14 +51,10 @@
             "@auto-scripts"
         ],
         "auto-scripts": [
-            "@test-all",
-            "@yarn-install",
-            "@yarn-build"
+            "@test-all"
         ],
-        "yarn-install": [
-            "yarn install"
-        ],
-        "yarn-build": [
+        "front-build": [
+            "yarn install",
             "yarn build"
         ],
         "test-all": [
