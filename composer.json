@@ -19,7 +19,7 @@
         "vlucas/phpdotenv": "^5.4",
         "micro/plugin-doctrine": "^1.6.0",
         "micro/plugin-twig": "^1.6",
-        "micro/plugin-twig-webpack-encore": "*"
+        "micro/plugin-twig-webpack-encore": "^1.6"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.29",
